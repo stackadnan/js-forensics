@@ -1,0 +1,1 @@
+function f(a){if(a){return 1}else{return 2}}var b=f(1),c=[1,2,3].map(function(n){return n*2});switch(b){case 1:c.push(4);break;default:c.pop()}console.log(b,c.join(","));
