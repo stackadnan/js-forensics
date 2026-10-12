@@ -1,0 +1,15 @@
+var sum = 1 + 2 * 3;
+var text = "con" + "cat" + 1 + 2;
+var mixed = 1 + 2 + "px";
+var truthy = !0, falsy = !1;
+var bits = (0xff & 0x0f) | (1 << 4);
+var shifted = -1 >>> 28;
+var power = 2 ** 3 ** 2;
+var fraction = 0.1 + 0.2;
+var same = "abc" === "abc";
+var negated = 10 - (~5) * 2;
+var division = 1 / 0;
+var coerced = "5" * 2;
+var unknown = sum + 1 + 2;
+var prefix = "id-" + 4 + sum;
+console.log(sum, text, mixed, truthy, falsy, bits, shifted, power, fraction, same, negated, division, coerced, unknown, prefix);
