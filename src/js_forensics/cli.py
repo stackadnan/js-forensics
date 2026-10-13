@@ -90,7 +90,9 @@ def _console(file: io.StringIO | None = None, *, stderr: bool = False) -> Consol
     # file is printed literally and never interpreted as Rich markup.
     if file is not None:
         return Console(file=file, width=120, color_system=None, markup=False, highlight=False)
-    return Console(stderr=stderr, markup=False, highlight=False)
+    # Diagnostics are not hard-wrapped: a long file path must not split an
+    # error message across lines when stderr is captured or piped.
+    return Console(stderr=stderr, soft_wrap=stderr, markup=False, highlight=False)
 
 
 def _fail(error: JSForensicsError) -> typer.Exit:

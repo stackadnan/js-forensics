@@ -333,3 +333,17 @@ def test_readme_quick_start_commands_work(tmp_path: Path, monkeypatch: pytest.Mo
     produced = (tmp_path / "output" / "sample.deobfuscated.js").read_text()
     assert produced.strip() in (REPOSITORY / "README.md").read_text()
     assert sha256(example) == before
+
+
+def test_error_messages_are_not_wrapped_for_long_paths(tmp_path: Path):
+    # Regression: under a long directory name the message used to be folded
+    # at 80 columns, splitting phrases that scripts and tests search for.
+    deep = tmp_path / ("nested-directory-name-" * 6)
+    deep.mkdir()
+    path = deep / "malformed.js"
+    path.write_bytes((FIXTURES / "malformed.js").read_bytes())
+    result = runner.invoke(app, ["analyze", str(path)])
+    assert result.exit_code == 4
+    assert f"{path}: 3 syntax error(s); first at line 1, column 11" in result.output
+    missing = runner.invoke(app, ["analyze", str(deep / "missing.js")])
+    assert f"{deep / 'missing.js'} does not exist. Check the path" in missing.output
