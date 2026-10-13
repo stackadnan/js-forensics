@@ -1,0 +1,33 @@
+name: Feature request
+description: A new detector, transformation, output, or option.
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        JS Forensics is static only. Requests that need the analyzed file to be executed, or a URL from it to be contacted, are out of scope.
+  - type: textarea
+    id: problem
+    attributes:
+      label: What are you trying to find out about a file?
+    validations:
+      required: true
+  - type: textarea
+    id: example
+    attributes:
+      label: Example input
+      description: A short JavaScript snippet showing the pattern.
+      render: javascript
+    validations:
+      required: true
+  - type: textarea
+    id: output
+    attributes:
+      label: What the tool should report or produce for it
+    validations:
+      required: true
+  - type: textarea
+    id: safety
+    attributes:
+      label: For transformations, why is the rewrite always safe?
+      description: State the rule, and the cases where it must not apply.

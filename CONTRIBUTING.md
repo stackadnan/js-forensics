@@ -7,6 +7,10 @@ case and says clearly what it leaves alone is preferred to one that handles
 ten by guessing. Keep changes focused, write code a reviewer can follow, and
 do not claim something works unless a test shows it.
 
+By taking part you agree to follow the [Code of Conduct](CODE_OF_CONDUCT.md).
+Security problems are reported privately, as described in
+[SECURITY.md](SECURITY.md), not through issues or pull requests.
+
 ## Setup
 
 Python 3.10 or newer.
