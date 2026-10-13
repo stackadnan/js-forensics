@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://raw.githubusercontent.com/stackadnan/js-forensics/main/docs/assets/banner.png" alt="JS Forensics: static analysis for minified and obfuscated JavaScript. Example: an escaped string, an atob call and a String.fromCharCode call rewritten as plain string literals." width="100%">
+</p>
+
 # JS Forensics
 
 JS Forensics is a static-analysis toolkit for JavaScript that is minified,

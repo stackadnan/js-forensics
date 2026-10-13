@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="420" viewBox="0 0 1280 420" role="img" aria-label="JS Forensics: static analysis for minified and obfuscated JavaScript">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0d1420"/>
+      <stop offset="1" stop-color="#131c2e"/>
+    </linearGradient>
+  </defs>
+  <style>
+    .sans { font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; }
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 15px; }
+  </style>
+  <rect width="1280" height="420" rx="18" fill="url(#bg)"/>
+
+  <!-- magnifier over braces -->
+  <g transform="translate(64 78)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M14 4c-7 0-9 3-9 9v6c0 4-2 6-5 6 3 0 5 2 5 6v6c0 6 2 9 9 9" stroke="#f2c14e" stroke-width="3.5"/>
+    <path d="M40 4c7 0 9 3 9 9v6c0 4 2 6 5 6-3 0-5 2-5 6v6c0 6-2 9-9 9" stroke="#f2c14e" stroke-width="3.5"/>
+    <circle cx="27" cy="25" r="9" stroke="#7fd1b9" stroke-width="3.5"/>
+    <path d="M34 32l9 9" stroke="#7fd1b9" stroke-width="3.5"/>
+  </g>
+
+  <text x="64" y="196" class="sans" font-size="60" font-weight="700" fill="#f4f6fa">JS Forensics</text>
+  <text x="66" y="240" class="sans" font-size="22" fill="#b6c2d6">Static analysis for minified and</text>
+  <text x="66" y="270" class="sans" font-size="22" fill="#b6c2d6">obfuscated JavaScript</text>
+  <text x="66" y="326" class="sans" font-size="16" fill="#7fd1b9">Never executes the file. Never contacts a URL.</text>
+
+  <!-- code panel -->
+  <rect x="610" y="56" width="606" height="308" rx="12" fill="#0a0f18" stroke="#26334a"/>
+  <circle cx="636" cy="80" r="6" fill="#3a4760"/>
+  <circle cx="656" cy="80" r="6" fill="#3a4760"/>
+  <circle cx="676" cy="80" r="6" fill="#3a4760"/>
+  <text x="1192" y="85" class="mono" font-size="13" text-anchor="end" fill="#5d6b85">js-forensics deobfuscate</text>
+  <line x1="610" y1="102" x2="1216" y2="102" stroke="#26334a"/>
+
+  <g class="mono">
+    <text x="636" y="140" fill="#8090aa">"\x74\x6f\x6b\x65\x6e"</text>
+    <text x="636" y="166" fill="#7fd1b9">→ "token"</text>
+
+    <text x="636" y="216" fill="#8090aa">atob("L3YxL3Nlc3Npb24=")</text>
+    <text x="636" y="242" fill="#7fd1b9">→ "/v1/session"</text>
+
+    <text x="636" y="292" fill="#8090aa">String.fromCharCode(0x50,0x4f,0x53,0x54)</text>
+    <text x="636" y="318" fill="#7fd1b9">→ "POST"</text>
+  </g>
+</svg>
