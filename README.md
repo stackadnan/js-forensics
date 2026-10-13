@@ -32,17 +32,24 @@ relying on a result.
 
 ## Installation
 
-Python 3.10 to 3.14 is supported. The package is not on PyPI; install it from
-a checkout:
+Python 3.10 to 3.14 is supported.
 
 ```console
-$ git clone <repository-url> js-forensics
-$ cd js-forensics
-$ python -m venv .venv && source .venv/bin/activate
-$ pip install .
+$ pip install js-forensics
 $ js-forensics --version
 js-forensics 0.1.0
 ```
+
+To install from source instead:
+
+```console
+$ git clone https://github.com/stackadnan/js-forensics.git
+$ cd js-forensics
+$ python -m venv .venv && source .venv/bin/activate
+$ pip install .
+```
+
+The Quick start examples use `examples/sample.js` from the repository.
 
 ## Quick start
 
@@ -132,8 +139,8 @@ Exit codes: `0` success, `2` invalid command line, `3` input file missing,
 unreadable, too large, or not UTF-8, `4` JavaScript syntax error, `5` output
 could not be written. `1` is an unexpected internal error.
 
-[docs/usage.md](docs/usage.md) is the full reference, including the counting
-rules and every indicator's threshold. [docs/output-schema.md](docs/output-schema.md)
+[docs/usage.md](https://github.com/stackadnan/js-forensics/blob/main/docs/usage.md) is the full reference, including the counting
+rules and every indicator's threshold. [docs/output-schema.md](https://github.com/stackadnan/js-forensics/blob/main/docs/output-schema.md)
 describes the JSON.
 
 ## Supported analysis techniques
@@ -223,12 +230,14 @@ Every input is treated as hostile.
 
 ## Contributing
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for setup, the checks to run, and the
+See [CONTRIBUTING.md](https://github.com/stackadnan/js-forensics/blob/main/CONTRIBUTING.md) for setup, the checks to run, and the
 rules for adding detectors and transformations.
-[docs/architecture.md](docs/architecture.md) explains how the code is laid
+[docs/architecture.md](https://github.com/stackadnan/js-forensics/blob/main/docs/architecture.md) explains how the code is laid
 out.
 
 ## License
 
-No license has been chosen for this project yet, so default copyright applies
-until the repository owner adds one.
+MIT. See [LICENSE](https://github.com/stackadnan/js-forensics/blob/main/LICENSE).
+
+Security problems should be reported privately; see
+[SECURITY.md](https://github.com/stackadnan/js-forensics/blob/main/SECURITY.md).

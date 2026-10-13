@@ -25,3 +25,5 @@ First release.
   what changed and what was skipped.
 - Terminal, JSON, and standalone HTML reports, with likely credentials
   redacted by default.
+- MIT license, code of conduct, security policy, and issue and pull request
+  templates.
